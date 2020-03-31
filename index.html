@@ -1,0 +1,122 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="gb2312">
+<title>CSS代码格式化工具 - 鲁虺工具箱</title>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link href="css/style.css" rel="stylesheet">
+<script language=JavaScript> 
+<!-- 
+function $() { 
+  var elements = new Array(); 
+  for (var i = 0; i < arguments.length; i++) { 
+  var element = arguments[i]; 
+  if (typeof element == 'string') 
+    element = document.getElementById(element); 
+  if (arguments.length == 1)  
+    return element;    
+  elements.push(element); 
+  }    
+  return elements; 
+} 
+function CSSencode(code) 
+{ 
+ code = code.replace(/\r\n/ig,''); 
+ code = code.replace(/(\s){2,}/ig,'$1'); 
+ code = code.replace(/\t/ig,''); 
+ code = code.replace(/\n\}/ig,'\}'); 
+ code = code.replace(/\n\{\s*/ig,'\{'); 
+ code = code.replace(/(\S)\s*\}/ig,'$1\}'); 
+ code = code.replace(/(\S)\s*\{/ig,'$1\{'); 
+ code = code.replace(/\{\s*(\S)/ig,'\{$1'); 
+ return code; 
+} 
+function CSSdecode(code) 
+{ 
+ code = code.replace(/(\s){2,}/ig,'$1'); 
+ code = code.replace(/(\S)\s*\{/ig,'$1 {'); 
+ code = code.replace(/\*\/(.[^\}\{]*)}/ig,'\*\/\n$1}'); 
+ code = code.replace(/\/\*/ig,'\n\/\*'); 
+ code = code.replace(/;\s*(\S)/ig,';\n\t$1'); 
+ code = code.replace(/\}\s*(\S)/ig,'\}\n$1'); 
+ code = code.replace(/\n\s*\}/ig,'\n\}'); 
+ code = code.replace(/\{\s*(\S)/ig,'\{\n\t$1'); 
+ code = code.replace(/(\S)\s*\*\//ig,'$1\*\/'); 
+ code = code.replace(/\*\/\s*([^\}\{]\S)/ig,'\*\/\n\t$1'); 
+ code = code.replace(/(\S)\}/ig,'$1\n\}'); 
+ code = code.replace(/(\n){2,}/ig,'\n'); 
+ code = code.replace(/:/ig,':'); 
+ code = code.replace(/  /ig,' '); 
+ return code; 
+} 
+//--> 
+</script>
+</head>
+
+<body>
+<div class="header">"工欲善其事，必先利其器。"——孔子《论语·卫灵公》</div>
+
+<div class="title">
+      <div class="icon"><img src="images/cssformat.png" /></div>
+      <h1>CSS代码格式化工具</h1>
+      <div class="zuozhe">可实现CSS代码格式化和CSS在线压缩</div>
+</div>
+
+
+<div class="toolcode">
+    <!-- /工具开始 -->
+    <h3>请将CSS代码复制到下面表单中:</h3>
+        <textarea class="toolarea" id=code>#b {
+	width:1200px;
+	padding:0 12px;
+	background:#FFF;
+	position:relative
+}
+.l {
+	width:844px;
+	float:left;
+	border-right:1px solid #DDD;
+	padding-right:10px;
+	position:relative
+}
+.m {
+	width:670px;
+	float:left;
+	border-right:1px solid #DDD;
+	padding-right:10px;
+	position:relative
+}
+.r {
+	width:336px;
+	float:right;
+	padding-bottom:200px
+}
+.topbg {
+	height:30px;
+	background:url(http://www.luhui.net:90/zh/static/image/common/nv.png) repeat -20px 0
+}</textarea>
+        <input class="bt-green" onclick="$('code').value = CSSencode($('code').value);" value=横向排列 type=button><input class="bt-blue" onclick="$('code').value = CSSdecode($('code').value);" value=竖向排列 type=button>
+
+    <!-- /工具结束 -->
+</div>
+
+<span style="display:none;"><script src="http://s11.cnzz.com/stat.php?id=610720&web_id=610720" language="JavaScript"></script></span>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</body>
+</html>
